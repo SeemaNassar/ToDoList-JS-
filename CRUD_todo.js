@@ -144,7 +144,14 @@ function markAsDone(ID) {
 }
 
 function deleteTodo(ID) {
-    CompleteAction("Delete" ,ID);
+    const confirmed = confirm('Are you sure you want to delete this task?');
+
+    if (confirmed) {
+        CompleteAction("Delete" ,ID);
+    } else {
+        console.log('Delete action cancelled');
+    }
+    
 }
 
 function CompleteAction(Action ,ID){
