@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <form id="addTodoForm" onsubmit="addTodo()">
+        <input type="text" placeholder="add new task..." id="newTodoInput">
+        <input type="submit" value="Add">
+    </form>
+    <input type="text" placeholder="search task..." id="search" oninput="searchTasks()">
+    <table id="todoList">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th class="description-cell">TODO Description</th>
+                <th>User ID</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="todoTableBody" >
+        </tbody>
+        <tfoot>
+            <tr id="todoCountFooter">
+                <td colspan="5">Total Tasks: 0</td>
+            </tr>
+        </tfoot>
+        
+    </table>
+
+    <script src="CRUD_todo.js"></script> 
+
+</body>
+
+</html>
